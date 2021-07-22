@@ -1,0 +1,24 @@
+.frequentPosting{
+    background-color: #fff;
+    padding:20px;
+    border-radius: 10px;
+    select , input:not([type='text']), textarea{
+        background-color: #FCFCFC !important;
+    }
+   input:not([type='textarea']), select{
+        height:50px !important;
+    }
+    .paymentToggle{
+        background-color: #ffefe8;
+        padding:15px;
+        width: fit-content;
+        border-radius: 25px;
+        color:#FD5E1A;
+        cursor: pointer;
+    }
+    .paymentType{
+        background-color: #F3F5F8;
+        border-radius: 20px;
+        padding:20px;
+    }
+}

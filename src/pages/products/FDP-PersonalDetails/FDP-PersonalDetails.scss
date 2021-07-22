@@ -1,0 +1,76 @@
+.circle {
+	height: 35px;
+	width: 35px;
+}
+.FDP-PD-btn-section {
+	display: flex;
+	justify-content: flex-end;
+}
+.FDP-PD-checkbox-container {
+	overflow: auto;
+}
+.FDP-PD-checkbox-div {
+	width: 90%;
+}
+.icon {
+	color: rgba(10, 33, 62, 0.25);
+}
+.form-control {
+	border: 0.5px solid rgba(10, 33, 62, 0.15);
+	border-radius: 5px;
+}
+input {
+	background-color: #FCFCFC !important;
+}
+textarea {
+	background-color: #FCFCFC !important;
+}
+.btn-next {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600 !important;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.btn-prev {
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600 !important;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.FDP-PD-button {
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.FDP-PD-checkbox-container {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.FDP-PD-checkbox-div {
+		width: 240%;
+	}
+	.FDP-PD-btn-section {
+		display: block;
+	}
+	.btn-next {
+		width: 100%;
+	}
+	.btn-prev {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}

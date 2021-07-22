@@ -1,0 +1,15 @@
+#mobileMenu{
+    background-color: #fff;
+    
+    display: flex;
+    .icons {
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-right: 10px;
+      background-color: #fff !important;
+      border-radius: 30px;
+      padding:10px;
+    }
+    }
+}

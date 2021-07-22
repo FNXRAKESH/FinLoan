@@ -1,0 +1,16 @@
+#managejobs {
+	
+	.active {
+		color: #0A9D7A;
+		background: rgba(10, 157, 122, 0.1);
+		border-radius: 25px;
+	    padding: 6px 20px;
+	}
+
+	.inactive {
+		color: #FD5E1A;
+		background: rgba(253, 94, 26, 0.1);
+		border-radius: 25px;
+	    padding: 6px 20px;
+	}
+}

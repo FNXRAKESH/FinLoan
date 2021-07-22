@@ -1,0 +1,53 @@
+.custom-select {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+select {
+  background-color: #FCFCFC !important;
+}
+.form-control {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+input {
+	background-color: #FCFCFC !important;
+}
+.CTC-btn-section {
+	display: flex;
+	justify-content: flex-end;
+}
+.btn-submit {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600 !important;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.btn-cancel {
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600 !important;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.CTC-btn-section {
+		display: block;
+	}
+	.btn-submit {
+		width: 100%;
+	}
+	.btn-cancel {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}

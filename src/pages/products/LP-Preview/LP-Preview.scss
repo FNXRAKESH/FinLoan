@@ -1,0 +1,71 @@
+.CLP-rounded {
+	border-radius: 15px;
+	.greydiv {
+		background: #F3F5F8;
+		border-radius: 5px 5px 0px 0px;
+	}
+	.whitediv {
+		background: #FBFBFB;
+	}
+}
+.preview-lp {
+  color: #518EF8; 
+  background: rgba(81, 142, 248, 0.1);
+  font-size: 16px; 
+  border: 1.5px solid #518EF8; 
+  border-radius: 100px;
+}
+.LP-Preview-btns {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.LP-Preview-checkbox-div {
+  width: 90%;
+}
+.LP-Preview-checkbox-container {
+	overflow: auto;
+}
+.LP-Preview-btn-confirm {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600 !important;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.LP-Preview-btn-edit {
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600 !important;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.LP-Preview-checkbox-container {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.LP-Preview-checkbox-div {
+		width: 240%;
+	}
+	.LP-Preview-btns {
+		display: block;
+	}
+	.LP-Preview-btn-confirm {
+		width: 100%;
+	}
+	.LP-Preview-btn-edit {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}

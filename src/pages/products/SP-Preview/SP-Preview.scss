@@ -1,0 +1,49 @@
+.PSP-rounded {
+	border-radius: 15px;
+	.greydiv {
+		background: #F3F5F8;
+		border-radius: 5px 5px 0px 0px;
+	}
+	.whitediv {
+		background: #FBFBFB;
+	}
+}
+.SP-Preview-btns {
+	display: flex;
+	justify-content: flex-end;
+}
+.psp-btn-confirm {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.psp-btn-edit {
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+@media only screen and (max-width: 425px) {
+	
+	.-btns {
+		display: block;
+	}
+	.psp-btn-confirm {
+		width: 100%;
+	}
+	.psp-btn-edit {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}

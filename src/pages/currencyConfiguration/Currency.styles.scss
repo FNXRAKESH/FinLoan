@@ -1,0 +1,91 @@
+#currency {
+  .addCurrency {
+    background-color: #e3ebf8;
+    color: #518ef8;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #518ef8;
+  }
+
+  .searchIcon {
+    border: 0;
+    border-top-left-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+  }
+  .searchInput {
+    height: 50px;
+
+    border: 0;
+  }
+
+  .currencyConfig {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .currencyType {
+      background-color: #fff;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      width: 30%;
+      border-radius: 10px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .searchResult {
+    position: absolute;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 50%;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+    .row {
+      background-color: #fff;
+    }
+    .row:hover {
+      background-color: #f3f5f8;
+    }
+    .btnAdd {
+      background-color: #e3ebf8;
+      border: 2px solid #518ef8;
+      border-radius: 25px;
+      padding: 0 10px;
+      color: #518ef8;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  #currency {
+    .currencyConfig {
+      .currencyType {
+        width: 100% !important;
+      }
+    }
+    form{
+      width: 100% !important;
+    } 
+    .addCurrency{
+      padding: 5px !important;
+      margin: 0 !important;
+      p{
+        font-size: 12px !important;
+        width: max-content !important;
+      }
+    }
+  }
+}

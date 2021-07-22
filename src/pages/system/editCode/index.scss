@@ -1,0 +1,36 @@
+#editcode {
+	
+	.name-col, .pos-col {
+		color: #0A213E;
+		font-weight: 500;
+	}
+
+	.name-col {
+		padding-left: 1.5rem!important;
+	}
+
+	.desc-col {
+		color: rgba(10, 33, 62, 0.6);
+	}
+
+	.status-col .active {
+		color: #0A9D7A;
+		background: rgba(10, 157, 122, 0.1);
+		border-radius: 25px;
+	    padding: 6px 20px;
+	}
+
+	.status-col .inactive {
+		color: #FD5E1A;
+		background: rgba(253, 94, 26, 0.1);
+		border-radius: 25px;
+	    padding: 6px 20px;
+	}
+
+	@media (min-width: 568px) {
+		.table td, .table th {
+			max-width: 25vw;
+	    	/*word-break: break-all;*/
+		}
+	}
+}

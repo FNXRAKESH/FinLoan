@@ -1,0 +1,45 @@
+.activities{
+    background-color: #fff;
+    border-radius: 10px;
+    padding:15px;
+    min-height: 320px;
+    p{
+        font-size: 14px;
+    }
+     
+}
+
+@media only screen and (max-width:768px){
+    #dashboard{
+        padding: 10px !important;
+    
+    #dashboardContent{
+        flex-wrap: wrap !important;
+    
+     
+    #activityList{
+        flex-direction: column;
+        div{
+            width: 100% !important;
+            
+        }
+        :nth-child(1){
+            padding-right: 0 !important;
+            margin-bottom: 10px;
+        }
+        .activities{
+            padding:10px !important
+        }
+    }
+    #rightPanel{
+        #amountDisbursed{
+            padding:0px !important;
+            margin-bottom: 15px;
+        }
+         #amountCollected{
+            padding:0px !important
+        }
+    }
+}
+}
+}

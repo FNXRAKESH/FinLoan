@@ -1,0 +1,252 @@
+#manageOffice,
+#officeDetails {
+  .addOffice {
+    background-color: #e3ebf8;
+    color: #518ef8;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #518ef8;
+  }
+  .search {
+    margin-bottom: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    .searchIcon {
+      background-color: #fcfcfc !important;
+      border: 0;
+      border-top-left-radius: 25px !important;
+      border-bottom-left-radius: 25px !important;
+    }
+    .searchInput {
+      height: 50px;
+
+      border: 0;
+    }
+    #filter {
+      button {
+        box-shadow: none;
+        outline: none;
+        color: #518ef8;
+      }
+    }
+    #searchBtn {
+      background-color: #0645b1;
+      color: #fff;
+      padding: 10px;
+      border-radius: 30px;
+      width: 150px;
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+
+  .officeList {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    table {
+      tr {
+        margin-bottom: 20px !important;
+        vertical-align: baseline;
+        th {
+          border-bottom: 1px solid #c2c2c2 !important;
+        }
+      }
+      td {
+        vertical-align: baseline;
+        border: none !important;
+        padding: 15px 5px;
+        p {
+          padding: 5px 0px;
+        }
+      }
+    }
+    .parent {
+      background-color: #eef4fe;
+      width: fit-content;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #518ef8;
+    }
+    #child {
+      border-left: 1px solid #e5e5e5;
+      padding: 15px;
+    }
+    #child div {
+      background-color: #e7e9ec;
+      width: fit-content;
+      padding: 10px;
+      margin: 10px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -25px;
+        top: 20px;
+        width: 25px;
+        height: 2px;
+        background-color: #e5e5e5;
+      }
+    }
+  }
+}
+
+#createOffice,
+#editOffice {
+  .create {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+    overflow-y: hidden;
+    input,
+    select {
+      height: 50px;
+      background-color: #fcfcfc;
+    }
+    .addedoffice {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 999;
+      div {
+        width: fit-content;
+        margin: 10px 10px 10px 0;
+        background-color: #518ef8;
+        color: #fff;
+        border-radius: 20px;
+        padding: 10px;
+      }
+    }
+
+    form {
+      position: relative;
+      input[type='text'],
+      input[type='date'] {
+        border-radius: 10px !important;
+      }
+    }
+    #manageDetails {
+      .search {
+        position: relative;
+
+        .form-control {
+          border-radius: 25px !important;
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+          border-top-right-radius: 25px !important;
+          border-bottom-right-radius: 25px !important;
+        }
+        .searchIcon {
+          border-top-left-radius: 10px !important;
+          border-bottom-left-radius: 10px !important;
+        }
+      }
+    }
+    .searchResult {
+      position: absolute;
+      max-height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      .row {
+        background-color: #fff;
+      }
+      .row:hover {
+        background-color: #f3f5f8;
+      }
+      .btnAdd {
+        background-color: #e3ebf8;
+        border: 2px solid #518ef8;
+        border-radius: 25px;
+        padding: 0 10px;
+        color: #518ef8;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#officeDetails {
+  .officeDetails {
+    background-color: #f3f5f8;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+}
+.import {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  input,
+  select {
+    height: 50px;
+  }
+  .imageUpload {
+    background-color: #f3f5f8;
+    padding: 25px;
+    border-radius: 50px;
+  }
+}
+.dragndrop {
+  border: 2px dashed #d4d7dc;
+  background-color: #fcfcfc;
+  border-radius: 15px;
+  padding: 20px;
+}
+.selectFile {
+  background-color: #ebf1fc;
+  color: #518ef8;
+  width: fit-content;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.fileUpload {
+  display: flex;
+  background-color: #eef4fe;
+  border: 2px solid #518ef8;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    background-color: #c7dbfd;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .office {
+    form {
+      width: 100% !important;
+    }
+  }
+}
+@media only screen and (max-width: 415px) {
+  #manageOffice .addOffice,
+  #officeDetails .addOffice {
+    padding: 5px !important;
+    margin-right:2px !important;
+    p{
+      font-size: 12px !important;
+    }
+  }
+}

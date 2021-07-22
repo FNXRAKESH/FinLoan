@@ -1,0 +1,83 @@
+.circle {
+	height: 35px;
+	width: 35px;
+}
+.FDP-Accounting-btn-section {
+	display: flex;
+	justify-content: flex-end;
+}
+.FDP-Accounting-checkbox-container {
+	overflow: auto;
+}
+.FDP-Accounting-text-small {
+	font-size: 18px;
+}
+.FDP-Accounting-checkbox-div {
+	width: 90%;
+}
+.custom-select {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+select {
+  background-color: #FCFCFC !important;
+}
+.icon {
+	color: rgba(10, 33, 62, 0.25);
+}
+.form-control {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+input {
+	background-color: #FCFCFC !important;
+}
+.click-appear-div {
+  background: rgba(81, 142, 248, 0.1);
+  border: 1px solid #518EF8;
+  border-radius: 15px;
+}
+.btn-next {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600 !important;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.btn-prev {
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600 !important;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.FDP-Accounting-checkbox-container {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.FDP-Accounting-checkbox-div {
+		width: 240%;
+	}
+	.select {
+		font-size: 15px;
+	}
+	.FDP-Accounting-btn-section {
+		display: block;
+	}
+	.btn-next {
+		width: 100%;
+	}
+	.btn-prev {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}

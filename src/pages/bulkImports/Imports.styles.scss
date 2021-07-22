@@ -1,0 +1,158 @@
+.downloadFile{
+  border:2px solid #518ef8; background-color:#ebf1fc; border-radius:7px; padding:12px;
+  .excelLogo{
+    height:25px;
+  };
+  .downloadLogo{
+    color:#518ef8;
+     font-weight:600;
+  }
+}
+
+.downloadButton{
+   
+  background-color: #ebf1fc;
+  border: 2px solid #518ef8;
+  border-radius: 200px;
+  color: #518ef8;
+  font-weight: 600;
+  margin-top: 33px;
+  width: 130px;
+  height:45px;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+#clients {
+  .addClient {
+    background-color: #e3ebf8;
+    color: #518ef8;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #518ef8;
+  }
+  .search {
+    filter: drop-shadow(2px 1px 10px #c3c3c3);
+    margin-bottom: 20px;
+    .searchIcon {
+      border: 0;
+      border-top-left-radius: 30px !important;
+      border-bottom-left-radius: 30px !important;
+    }
+    .searchInput {
+      height: 50px;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      border: 0;
+      border-right: 1px solid #c3c3c3;
+    }
+    #filter {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      button {
+        box-shadow: none;
+        outline: none;
+        color: #518ef8;
+      }
+    }
+    #searchBtn {
+      background-color: #0645b1;
+      color: #fff;
+      padding: 10px;
+      border-radius: 30px;
+      width: 150px;
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+
+  .clientsList {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    table {
+      tr {
+        margin-bottom: 20px !important;
+        vertical-align: baseline;
+        th {
+          border-bottom: 1px solid #c2c2c2 !important;
+        }
+      }
+      td {
+        vertical-align: baseline;
+        border: none !important;
+        p {
+          padding: 5px 0px;
+        }
+      }
+    }
+  }
+}
+
+
+  .create,.import {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+ input, select{
+        height:50px
+    }
+    .imageUpload {
+      background-color: #f3f5f8;
+      padding: 25px;
+      border-radius: 50px;
+  }
+  .selectFile {
+    background-color: #ebf1fc;
+    color: #518ef8;
+    width: fit-content;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .dragndrop {
+    border: 2px dashed #d4d7dc;
+    background-color: #fcfcfc;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  .addFamily {
+    background-color: #eef4fe;
+    color: #518ef8;
+    border-radius: 25px;
+    padding: 5px 8px;
+    cursor: pointer;
+    border: 1px solid #518ef8;
+    p {
+      font-size: 14px;
+    }
+  }
+  .addFamilyMember {
+    background-color: #eef4fe;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #518ef8;
+    margin-bottom: 20px;
+   
+  }
+  .fileUpload{
+    display: flex;
+    background-color: #eef4fe;
+    border: 2px solid #518EF8;
+    padding:10px;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    .overlay{
+      position: absolute;
+      top:0;
+      left:0;
+       
+      height:100%;
+      background-color: #c7dbfd;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+#users {
+  .addUser {
+    background-color: #e3ebf8;
+    color: #518ef8;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #518ef8;
+  }
+  .search {
+    filter: drop-shadow(2px 1px 10px #c3c3c3);
+    margin-bottom: 20px;
+    .searchIcon {
+      border: 0;
+      border-top-left-radius: 30px !important;
+      border-bottom-left-radius: 30px !important;
+    }
+    .searchInput {
+      height: 50px;
+
+      border: 0;
+    }
+    #filter {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      button {
+        box-shadow: none;
+        outline: none;
+        color: #518ef8;
+      }
+    }
+    #searchBtn {
+      background-color: #0645b1;
+      color: #fff;
+      padding: 10px;
+      border-radius: 30px;
+      width: 150px;
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+
+  .userList {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    table {
+      tr {
+        vertical-align: baseline;
+
+        th {
+          border-bottom: 1px solid #c2c2c2 !important;
+        }
+      }
+      td {
+        vertical-align: baseline;
+        border: none !important;
+        padding: 10px 0px;
+       
+      }
+    }
+  }
+}
+ .initial {
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+#createUser,#editUser {
+  .create {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    input:not([type='checkbox']),
+    select {
+      height: 50px;
+      background-color:#fcfcfc;
+    }
+    
+  }
+}
+.roleContainer {
+      background-color: #eef4fe;
+        border: 2px solid #518ef8;
+         border-radius: 10px;
+      
+    }
+    .roles {
+        display: flex;
+        align-items: center;
+        
+        border: 2px solid #518ef8;
+        padding: 5px 15px;
+        border-radius: 25px;
+        
+        margin: 5px;
+        img {
+          cursor: pointer;
+        }
+      }
+
+      #userDetails{
+        .userDetails{
+background-color: #f3f5f8;
+padding:10px;
+border-radius: 10px;
+margin:15px 0;
+        }
+       
+      }
+       #btnDelete{
+         background-color: #FD5E1A !important; 
+        }
+        #btnCancel{
+        color: rgba(10, 33, 62, 0.6) !important;
+          background-color: #f3f5f8 !important;
+        }

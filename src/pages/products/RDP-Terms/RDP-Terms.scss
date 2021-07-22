@@ -1,0 +1,99 @@
+.circle {
+	height: 35px;
+	width: 35px;
+}
+.RDP-Terms-btn-section {
+	display: flex;
+	justify-content: flex-end;
+}
+.RDP-Terms-checkbox-container {
+	overflow: auto;
+}
+.RDP-Terms-checkbox-div {
+	width: 90%;
+}
+.custom-select {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+select {
+  background-color: #FCFCFC !important;
+}
+.icon {
+	color: rgba(10, 33, 62, 0.25);
+}
+.RDP-Terms-input-section {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+.RDP-Terms-input-field {
+	width: 31%;
+}
+.form-control {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+input {
+	background-color: #FCFCFC !important;
+}
+.btn-next {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600 !important;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.btn-prev {
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600 !important;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.RDP-Terms-button {
+		width: 30%;
+	}
+	.RDP-Terms-input-section {
+		display: block;
+		width: 90%;
+	}
+	.RDP-Terms-input-field {
+		width: 60%;
+		margin-bottom: 5%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.RDP-Terms-checkbox-container {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.RDP-Terms-checkbox-div {
+		width: 240%;
+	}
+	.select {
+		font-size: 15px;
+	}
+	.RDP-Terms-btn-section {
+		display: block;
+	}
+	.btn-next {
+		width: 100%;
+	}
+	.btn-prev {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}

@@ -1,0 +1,98 @@
+.circle {
+	height: 35px;
+	width: 35px;
+}
+.RDP-Charges-btn-section {
+	display: flex;
+	justify-content: flex-end;
+}
+.RDP-Charges-checkbox-container {
+	overflow: auto;
+}
+.RDP-Charges-checkbox-div {
+	width: 90%;
+}
+.custom-select {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+select {
+  background-color: #FCFCFC !important;
+}
+.icon {
+	color: rgba(10, 33, 62, 0.25);
+}
+.RDP-Charges-input-section {
+	background: rgba(81, 142, 248, 0.1);
+  border: 0.5px solid #518EF8;
+  border-radius: 15px;
+}
+.form-control {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  border-radius: 5px;
+}
+input {
+	background-color: #FCFCFC !important;
+}
+.RDP-Charges-tags-div {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.RDP-Charges-tag {
+	background: rgba(81, 142, 248, 0.1);
+	border: 1.5px solid #518EF8;
+	border-radius: 100px;
+	color: #518EF8;
+}
+.btn-next {
+	color: white !important;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
+	font-weight: 600 !important;
+	&:hover {
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
+	}
+}
+.btn-prev {
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
+	font-weight: 600 !important;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6) !important;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.RDP-Charges-checkbox-container {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.RDP-Charges-checkbox-div {
+		width: 240%;
+	}
+	.select {
+		font-size: 15px;
+	}
+	.RDP-Charges-btn-section {
+		display: block;
+	}
+	.btn-next {
+		width: 100%;
+	}
+	.btn-prev {
+		width: 100%;
+		margin-bottom: 4vw;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.RDP-Charges-tags-div {
+		max-width: 414px;
+	}
+}

@@ -1,0 +1,29 @@
+#managecodes {
+	.search-box {
+		filter: drop-shadow(2px 1px 10px #c3c3c3);
+	}
+	.search-box>form {
+		max-width: 650px;
+	}
+	.input-group-prepend>span {
+		border: 0;
+	    border-top-left-radius: 30px !important;
+	    border-bottom-left-radius: 30px !important;
+	}
+	.search-input {
+		border-bottom-right-radius: 30px;
+		border-top-right-radius: 30px;
+		padding: 1.9rem 1rem;
+	}
+	.form-control:focus {
+		box-shadow: none;
+	}
+	.code-name {
+		color: #0a213e4d;
+	}
+	.system-text {
+		font-size: 15px;
+		color: #0a213e99;
+		border-right: 1.5px solid rgba(10, 33, 62, 0.25);
+	}
+}

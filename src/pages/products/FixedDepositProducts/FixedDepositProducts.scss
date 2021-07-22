@@ -1,0 +1,48 @@
+.table-div {
+  border-radius: 15px;
+}
+
+.create-fdp {
+  color: #518EF8; 
+  background: rgba(81, 142, 248, 0.1);
+  font-size: 16px; 
+  border: 1.5px solid #518EF8; 
+  border-radius: 100px;
+}
+
+.input-span {
+  border: 0.5px solid rgba(10, 33, 62, 0.15); 
+  border-radius: 39.5px 0 0 39.5px; 
+  box-shadow: 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+.cfdp-search {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+input[id="filter-by-name"]:placeholder-shown {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  padding: 5% 0 5% 0;
+  font-size: 18px;
+  border-radius: 0 39.5px 39.5px 0;
+  box-shadow: 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+              
+}
+
+@media only screen and (max-width: 960px) {
+  .create-fdp{
+    font-size: 16px;
+    width: 75%;
+    margin: 0 auto 4% 12% !important;
+  }
+  .cfdp-search{
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  input[id="filter-by-name"]::placeholder {
+    font-size: 13px;
+  }
+}

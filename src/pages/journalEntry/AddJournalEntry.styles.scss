@@ -1,0 +1,62 @@
+.addJournalEntry{
+    background-color: #fff;
+    padding:20px;
+    border-radius: 10px;
+    select , input:not([type='text']), textarea{
+        background-color: #FCFCFC !important;
+    }
+   input:not([type='textarea']), select{
+        height:50px !important;
+    }
+    .paymentToggle{
+        background-color: #ffefe8;
+        padding:15px;
+        width: fit-content;
+        border-radius: 25px;
+        color:#FD5E1A;
+        cursor: pointer;
+    }
+    .paymentType{
+        background-color: #F3F5F8;
+        border-radius: 20px;
+        padding:20px;
+    }
+    .debitEntry{
+      border: 1px solid #518EF8;
+      padding:20px;
+      border-radius: 15px;
+      background-color: #eef4fe;
+      margin-bottom:20px;
+       select , input{
+        background-color: #deeafd !important;
+        border: 1px solid #518EF8;
+    }
+    }
+     .creditEntry{
+      border: 1px solid #1AC29A;
+      padding:20px;
+      border-radius: 15px;
+      background-color: #e8f9f5;
+      margin-bottom:20px;
+       select , input{
+        background-color: #d3f4ec !important;
+        border: 1px solid #1AC29A;
+    }
+    }
+    .addDebit{
+      color:#518EF8;
+      background-color: #eef4fe;
+      padding:10px 20px;
+      border-radius: 25px;
+      margin-bottom:20px;
+      cursor: pointer;
+    }
+       .addCredit{
+      color:#1AC29A;
+      background-color: #e8f9f5;
+      padding:10px 20px;
+      border-radius: 25px;
+      margin-bottom:20px;
+        cursor: pointer;
+    }
+}

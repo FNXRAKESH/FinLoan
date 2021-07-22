@@ -1,0 +1,32 @@
+.shortcuts{
+    background-color: #fff;
+    border-radius: 10px;
+    padding:15px 10px;
+    display: flex;
+    align-items: center;
+     
+     margin-bottom: 20px;
+     position: relative;
+     overflow-x: hidden;
+    h6, p{
+        margin:0
+    }
+    .ctrl{
+        background-color: rgba(81, 142, 248, 0.1);
+        color:#518EF8;
+        padding:5px 8px;
+        border-radius: 15px;
+    }
+    .shift{
+        background-color:rgba(26, 194, 154, 0.1);
+        color:#1AC29A;
+        padding:5px 8px;
+        border-radius: 15px;
+    }
+      .alphabet{
+        background-color:rgba(10, 33, 62, 0.1);
+        color:#0A213E;
+        padding:5px 8px;
+        border-radius: 15px;
+    }
+}
