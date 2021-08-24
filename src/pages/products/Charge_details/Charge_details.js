@@ -16,8 +16,8 @@ const Delete_charge = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="changeCursor">
-      <h6 onClick={handleShow}>
+    <div>
+      <h6 className="cursor-pointer" onClick={handleShow}>
         Delete Charge
       </h6>
 

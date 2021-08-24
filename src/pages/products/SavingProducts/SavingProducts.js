@@ -51,22 +51,25 @@ const SavingProducts = () => {
 
   return (
     <div id="SavingProducts" className="pl-5">
-      <div className="py-3 d-flex">
-        <h5 className="flex-grow-1">Saving Products</h5>
-        <motion.button
-          className="create-sap py-2 px-3"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          onClick={goto_pd}
-        >
-          <FontAwesomeIcon
-            className="mr-3 mt-1"
-            icon={faPlusCircle}
-            style={{ fontSize: '20px' }}
-          />
-          Create Saving Products
-        </motion.button>
+      <div className="py-3 row d-flex">
+        <h5 className="col-md-6 mt-3 mb-4">Saving Products</h5>
+
+        <div className="col-md-6 mt-3 d-flex justify-content-end">
+          <motion.button
+            className="create-sap py-2 px-3"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            onClick={goto_pd}
+          >
+            <FontAwesomeIcon
+              className="mr-3 mt-1"
+              icon={faPlusCircle}
+              style={{ fontSize: '20px' }}
+            />
+            Create Saving Products
+          </motion.button>
+        </div>
       </div>
       
 

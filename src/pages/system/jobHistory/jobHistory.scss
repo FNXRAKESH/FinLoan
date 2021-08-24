@@ -1,0 +1,35 @@
+.table-div {
+  border-radius: 15px;
+}
+
+.input-span {
+  border: 0.5px solid rgba(10, 33, 62, 0.15); 
+  border-radius: 39.5px 0 0 39.5px; 
+  box-shadow: 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+.jobHistory-search {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+input[id="filter-by-name"]:placeholder-shown {
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  padding: 5% 0 5% 0;
+  font-size: 18px;
+  border-radius: 0 39.5px 39.5px 0;
+  box-shadow: 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+              
+}
+
+@media only screen and (max-width: 960px) {
+  .jobHistory-search{
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  input[id="filter-by-name"]::placeholder {
+    font-size: 13px;
+  }
+}

@@ -56,7 +56,25 @@ const App = () => (
       <Route path="/roledetails" component={Main} />
       <Route path="/managejobs" component={Main} />
       <Route path="/manageroles" component={Main} />
+      
       {/* Ashish */}
+      <Route path="/makercheckertasks" component={Main} />
+      <Route path="/externalservices" component={Main} />
+      <Route path="/notificationServices_table" component={Main} />
+      <Route path="/notificationServices" component={Main} />
+      <Route path="/amazonServices" component={Main} />
+      <Route path="/amazonServices_table" component={Main} />
+      <Route path="/manageSurveys" component={Main} />
+      <Route path="/manageSchedulerJobs" component={Main} />
+      <Route path="/etemappingall" component={Main} />
+      <Route path="/etemapping" component={Main} />
+      <Route path="/Configurations" component={Main} />
+      <Route path="/EmailServices_table" component={Main} />
+      <Route path="/SMSservices_table" component={Main} />
+      <Route path="/EmailServices" component={Main} />
+      <Route path="/SMSservices" component={Main} />
+      <Route path="/editSurvey" component={Main} />
+      <Route path="/createSurvey" component={Main} />
       <Route path="/sp-preview" component={Main} />
       <Route path="/recurring-deposit-products" component={Main} />
       <Route path="/rdp-personal-details" component={Main} />

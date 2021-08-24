@@ -5,6 +5,10 @@ import Plus from './icons/plus-circle.svg';
 import Search from './icons/search.svg';
 import Edit from './icons/edit.svg';
 import './index.scss';
+import ReactDOM from 'react-dom';
+import {Button, Modal} from 'react-bootstrap';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const data = [
     {
@@ -44,6 +48,65 @@ const data = [
         code: 'Expense account tags'
     }
 ];
+
+const Add_Code = () => {
+  
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <div>
+        <div
+            className="blue-btn"
+            data-toggle="modal"
+            data-target="#addcode"
+            onClick={handleShow}
+        >
+            <img src={Plus} className="mr-2" alt="" />
+            Add Codes
+        </div>
+
+        
+        <Modal show={show} onHide={handleClose} size="sm" centered>
+            <div className="mx-2">
+                <Modal.Body>
+                    <div className="d-flex">
+                    <h5 className="">Add Code</h5>
+                    <FontAwesomeIcon 
+                        className="ml-auto cursor-pointer" 
+                        icon={faTimes}
+                        onClick={handleClose}
+                    />
+                    </div>
+                <div className="mt-4">
+                    <label>
+                        Code Name
+                    </label>
+                    <input 
+                        className="form-control"
+                        type="text"
+                    />
+                </div>
+                <div className="mt-3">
+                    <Button 
+                    onClick={handleClose}
+                    className="border-0 btn-lg btn-block mb-3"
+                    style={{background: '#1AC29A', color: 'white'}}>
+                    <h6 className="my-1">Save</h6>
+                    </Button>
+                </div>
+                </Modal.Body>
+            </div>
+        </Modal>
+
+      </div>
+    );
+  }
+  
+  ReactDOM.render(<Add_Code />, document.getElementById('root'));
+  
 
 export default function ManageCodes() {
     const history = useHistory();
@@ -105,15 +168,7 @@ export default function ManageCodes() {
         <div id="managecodes" className="pl-5 mb-5">
             <div className="py-3 d-flex align-items-center">
                 <h5 className="flex-grow-1">Manage Codes</h5>
-                <div
-                    className="blue-btn"
-                    data-toggle="modal"
-                    data-target="#addcode"
-                    // onClick={() => triggerModal('addcode')}
-                >
-                    <img src={Plus} className="mr-2" alt="" />
-                    Add Codes
-                </div>
+                <Add_Code />
             </div>
 
             <div className="row my-5 w-100">
@@ -200,57 +255,6 @@ export default function ManageCodes() {
                               </div>
                           </div>
                       ))}
-            </div>
-            {/*<!-- Modals -->*/}
-            <div
-                className={`modal fade`}
-                tabIndex="-1"
-                role="dialog"
-                aria-labelledby="addCode"
-                aria-hidden="true"
-                id="addcode"
-            >
-                <div
-                    className="modal-dialog modal-dialog-centered"
-                    role="document"
-                >
-                    <div className="modal-content">
-                        <div className="modal-header border-bottom-0">
-                            <h5 className="modal-title" id="addCodeModal">
-                                Add code
-                            </h5>
-                            <button
-                                type="button"
-                                className="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            <label className="form-label" htmlFor="addCode">
-                                Code Name
-                            </label>
-                            <input
-                                type="text"
-                                value={addCodeInput}
-                                onChange={e => handleAddCode(e)}
-                                className="form-control"
-                            />
-                        </div>
-                        <div className="modal-footer border-top-0">
-                            <button
-                                type="button"
-                                className="green-btn w-100"
-                                data-dismiss="modal"
-                                onClick={addCode}
-                            >
-                                Save
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );

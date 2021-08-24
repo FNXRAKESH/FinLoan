@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
 import Plus from './icons/plus-circle.svg';
+import ReactDOM from 'react-dom';
+import {Button, Modal} from 'react-bootstrap';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const data = [
     {
@@ -19,6 +23,75 @@ const data = [
         checked: true
     }
 ];
+
+const Add_Role = () => {
+  
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <div>
+        <div
+            className="blue-btn d-inline-block"
+            data-toggle="modal"
+            data-target="#addnewrole"
+            onClick={handleShow}
+        >
+            <img src={Plus} className="mr-2" alt="" />
+            <span className="align-middle">Add Role</span>
+        </div>
+
+        
+        <Modal show={show} onHide={handleClose} size="sm" centered>
+            <div className="mx-2">
+                <Modal.Body>
+                    <div className="d-flex">
+                    <h5 className="">New Role</h5>
+                    <FontAwesomeIcon 
+                        className="ml-auto cursor-pointer" 
+                        icon={faTimes}
+                        onClick={handleClose}
+                    />
+                    </div>
+                <div className="mt-4">
+                    <label>
+                        Role Title
+                    </label>
+                    <input 
+                        className="form-control"
+                        type="text"
+                    />
+                </div>
+                <div className="mt-3">
+                    <label>
+                        Role Description
+                    </label>
+                    <textarea
+                        className="form-control"
+                        rows="3"
+                        type="text"
+                    />
+                </div>
+                <div className="mt-3">
+                    <Button 
+                    onClick={handleClose}
+                    className="border-0 btn-lg btn-block mb-3"
+                    style={{background: '#1AC29A', color: 'white'}}>
+                    <h6 className="my-1">Add Role</h6>
+                    </Button>
+                </div>
+                </Modal.Body>
+            </div>
+        </Modal>
+
+      </div>
+    );
+  }
+  
+  ReactDOM.render(<Add_Role />, document.getElementById('root'));
+  
 
 export default function ManageRoles() {
     const [roles, addRoles] = useState(data);
@@ -66,14 +139,7 @@ export default function ManageRoles() {
             <div className="py-3 d-flex align-items-center">
                 <h5 className="flex-grow-1">Manage Roles & Permissions</h5>
                 <div>
-                    <div
-                        className="blue-btn d-inline-block"
-                        data-toggle="modal"
-                        data-target="#addnewrole"
-                    >
-                        <img src={Plus} className="mr-2" alt="" />
-                        <span className="align-middle">Add Role</span>
-                    </div>
+                    <Add_Role />
                 </div>
             </div>
             <div className="row w-100">
@@ -105,70 +171,7 @@ export default function ManageRoles() {
                 ))}
             </div>
             {/*Modals*/}
-            <div
-                className="modal fade"
-                tabIndex="-1"
-                role="dialog"
-                aria-labelledby="addrole"
-                aria-hidden="true"
-                id="addnewrole"
-            >
-                <div
-                    className="modal-dialog modal-dialog-centered"
-                    role="document"
-                >
-                    <div className="modal-content">
-                        <div className="modal-header border-bottom-0">
-                            <h5 className="modal-title" id="addCodeModal">
-                                New Role
-                            </h5>
-                            <button
-                                type="button"
-                                className="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            <label className="form-label" htmlFor="addCode">
-                                Role Title
-                            </label>
-                            <input
-                                type="text"
-                                id="addCode"
-                                value={newRole.roleName}
-                                onChange={e => handleAddRole(e, 'name')}
-                                className="form-control"
-                            />
-                        </div>
-                        <div className="modal-body">
-                            <label className="form-label" htmlFor="addCode">
-                                Role Description
-                            </label>
-                            <textarea
-                                type="text"
-                                id="roleDesc"
-                                value={newRole.desc}
-                                onChange={e => handleAddRole(e, 'desc')}
-                                rows={6}
-                                className="form-control"
-                            />
-                        </div>
-                        <div className="modal-footer border-top-0">
-                            <button
-                                type="button"
-                                className="green-btn w-100"
-                                data-dismiss="modal"
-                                onClick={addNewRole}
-                            >
-                                Save
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     );
 }

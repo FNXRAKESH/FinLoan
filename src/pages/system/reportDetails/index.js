@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {Button, Modal} from 'react-bootstrap';
+import ReactDOM from 'react-dom';
 import Edit from './icons/edit.svg';
 import Delete from './icons/delete.svg';
 import EditBlue from './icons/edit-blue.svg';
@@ -29,6 +31,53 @@ const data = [
     }
 ];
 
+const Delete_Report = () => {
+  
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <div>
+        <div
+            className="red-btn d-inline-block"
+            data-toggle="modal"
+            data-target="#deletereport"
+            onClick={handleShow}
+        >
+            <img src={DeleteRed} className="mr-2" alt="" />
+            <span className="align-middle">Delete</span>
+        </div>
+  
+        <Modal show={show} onHide={handleClose} size="sm" centered>
+          <Modal.Body>
+            <h5 className="text-center mt-2 mb-5">Delete Report?</h5>
+            <div>
+              <Button 
+                className="border-0 btn-lg btn-block mb-3"
+                style={{background: '#FD5E1A'}}>
+                <h6>Yes, Delete</h6>
+              </Button>
+            </div>
+            <div>
+              <Button 
+                onClick={handleClose}
+                className="border-0 btn-lg btn-block mb-3"
+                style={{background: '#F3F5F8', color: 'rgba(10, 33, 62, 0.6)'}}>
+                <h6>No, Keep it</h6>
+              </Button>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </div>
+    );
+  }
+  
+  ReactDOM.render(<Delete_Report />, document.getElementById('root'));
+  
+  
+
 export default function ReportDetails() {
     const [details, setDetails] = useState(data);
 
@@ -36,19 +85,12 @@ export default function ReportDetails() {
         <div id="reportdetails" className="pl-5 mb-5">
             <div className="py-3 d-flex align-items-center">
                 <h5 className="flex-grow-1">Report Details</h5>
-                <div>
+                <div className="d-flex">
                     <div className="blue-btn d-inline-block">
                         <img src={EditBlue} className="mr-2" alt="" />
                         <span className="align-middle">Edit</span>
                     </div>
-                    <div
-                        className="red-btn d-inline-block"
-                        data-toggle="modal"
-                        data-target="#deletereport"
-                    >
-                        <img src={DeleteRed} className="mr-2" alt="" />
-                        <span className="align-middle">Delete</span>
-                    </div>
+                    <Delete_Report />
                 </div>
             </div>
 

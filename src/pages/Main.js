@@ -116,8 +116,27 @@ import LP_PersonalDetails from './products/LP-PersonalDetails/LP-PersonalDetails
 import LoanProducts from './products/LoanProducts/LoanProducts';
 import Products from './products/Products/Products';
 import ManageTaxConfigurations from './products/ManageTaxConfigurations/ManageTaxConfigurations';
-import JobHistory from './system/jobHistory';
+import jobHistory from './system/jobHistory/jobHistory';
 import ManageJobs from './system/manageJobs';
+
+import createSurvey from './system/createSurvey/createSurvey';
+import editSurvey from './system/editSurvey/editSurvey';
+import SMSservices from './system/SMSservices/SMSservices';
+import EmailServices from './system/EmailServices/EmailServices';
+import SMSservicesTable from './system/SMSservicesTable/SMSservicesTable';
+import EmailServicesTable from './system/EmailServicesTable/EmailServicesTable';
+import Configurations from './system/Configurations/Configurations';
+import ETEMapping from './system/ETEMapping/ETEMapping';
+import ETEMappingAll from './system/ETEMappingAll/ETEMappingAll';
+import manageSchedulerJobs from './system/manageSchedulerJobs/manageSchedulerJobs';
+import manageSurveys from './system/manageSurveys/manageSurveys';
+import amazonServicesTable from './system/amazonServicesTable/amazonServicesTable';
+import amazonServices from './system/amazonServices/amazonServices';
+import notificationServices from './system/notificationServices/notificationServices';
+import notificationServicesTable from './system/notificationServicesTable/notificationServicesTable';
+import externalServices from './system/externalServices/externalServices';
+import makerCheckerTasks from './system/makerCheckerTasks';
+
 const Main = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -181,13 +200,30 @@ const Main = () => {
             <Route path="/reportdetails" component={ReportDetails} />
             <Route path="/createreport" component={CreateReport} />
             <Route path="/manageroles" component={ManageRoles} />
-            <Route path="/jobhistory" component={JobHistory} />
+            <Route path="/jobhistory" component={jobHistory} />
             <Route path="/editjob" component={EditJob} />
             <Route path="/jobdetails" component={JobDetails} />
             <Route path="/roledetails" component={RoleDetails} />
             <Route path="/managejobs" component={ManageJobs} />
             <Route path="/manageroles" component={ManageRoles} />
             {/* Ashish */}
+            <Route path="/makercheckertasks" component={makerCheckerTasks} />
+            <Route path="/externalservices" component={externalServices} />
+            <Route path="/notificationServices_table" component={notificationServicesTable} />
+            <Route path="/notificationServices" component={notificationServices} />
+            <Route path="/amazonServices" component={amazonServices} />
+            <Route path="/amazonServices_table" component={amazonServicesTable} />
+            <Route path="/manageSurveys" component={manageSurveys} />
+            <Route path="/manageSchedulerJobs" component={manageSchedulerJobs} />
+            <Route path="/etemappingall" component={ETEMappingAll} />
+            <Route path="/etemapping" component={ETEMapping} />
+            <Route path="/configurations" component={Configurations} />
+            <Route path="/EmailServices_table" component={EmailServicesTable} />
+            <Route path="/SMSservices_table" component={SMSservicesTable} />
+            <Route path="/EmailServices" component={EmailServices} />
+            <Route path="/SMSservices" component={SMSservices} />
+            <Route path="/createSurvey" component={createSurvey} />
+            <Route path="/editSurvey" component={editSurvey} />
             <Route path="/sp-preview" component={SP_Preview} />
             <Route
               path="/recurring-deposit-products"

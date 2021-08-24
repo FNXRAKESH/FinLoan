@@ -5,6 +5,8 @@ import Check from './icons/check.svg';
 import Edit from './icons/edit-white.svg';
 import Right from './icons/chevron-right.svg';
 import './index.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen, faSave, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const data = [
     {
@@ -59,6 +61,7 @@ const data = [
         sector: 'Organisation',
         selected: false
     }
+
 ];
 
 const permissions = [
@@ -105,101 +108,105 @@ export default function RoleDetails() {
         <div id="roledetails" className="pl-5 mb-5">
             <h5 className="py-3">Role Details</h5>
 
-            <div className="row w-100">
-                <div className="col-12">
+            <div
+                className={`row mb-4 mx-auto ${active ? 'activeBg' : 'bg-white'} py-3 px-3`}
+                style={{ borderRadius: '15px' }}
+            >
+                <div className="col">
+                    <div>
+                        <h5
+                            style={{
+                                color: `${active ? 'white' : ''}`
+                            }}
+                        >
+                            Loan Officer
+                        </h5>
+                        <h6 style={{ color: `${active ? 'white' : 'rgba(10, 33, 62, 0.6)'}` }}>Loan Officer</h6>
+                    </div>
+
+                </div>
+
+                <div className="col d-flex justify-content-end my-auto">
                     <div
-                        className={`white-card d-flex justify-content-between py-4 ${
-                            active ? 'blue-card' : ''
-                        }`}
+                        className={`${active ? 'roleActive' : 'roleInactive'} d-flex mr-4`}
                     >
-                        <div>
-                            <h5>Loan Officer</h5>
-                            <div className="text-muted">Loan Officer</div>
-                        </div>
-                        <div>
-                            <div
-                                className="red-btn d-inline-block mr-4"
-                                data-toggle="modal"
-                                data-target="#deletereport"
-                            >
-                                <img
-                                    src={`${active ? DeleteWhite : DeleteRed}`}
-                                    className="mr-2"
-                                    alt=""
-                                />
-                                <span className="align-middle">Delete</span>
-                            </div>
-                            <div className="custom-control custom-switch d-inline-block">
-                                <input
-                                    type="checkbox"
-                                    checked={active}
-                                    onChange={handleActive}
-                                    className="custom-control-input"
-                                    id="role"
-                                />
-                                <label
-                                    className="custom-control-label"
-                                    htmlFor="role"
-                                ></label>
-                            </div>
+                        <div className="d-flex" style={{ cursor: 'pointer' }}>
+                            <FontAwesomeIcon className="ml-3 mr-2 my-auto" icon={faTrash} />
+                            <h6 className="my-2">Delete</h6>
                         </div>
                     </div>
+                    <div class="custom-control custom-switch py-2">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1" onChange={handleActive} />
+                        <label class="custom-control-label editSurvey-text-small" for="customSwitch1"></label>
+                    </div>
                 </div>
+
             </div>
 
-            <div className="row w-100 mt-5">
+            <div
+                className="row w-100 mt-5 mx-auto px-3 py-3 bg-white"
+                style={{ borderRadius: "15px" }}
+            >
                 <div className="col-12">
-                    <div className="white-card">
-                        <div className="row">
-                            <div className="col-12 d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">
+                    <div>
+                        <div className="row py-3 border-bottom">
+                            <div className="col-md">
                                 <div>
-                                    <h6>Permissions</h6>
+                                    <h5>
+                                        Permissions
+                                    </h5>
                                 </div>
-                                <div className="text-muted">
-                                    <span>
-                                        <img src={Check} alt="" />
+
+                            </div>
+
+                            <div className="col-md d-flex justify-content-end my-auto">
+                                
+                                <div className="d-flex mr-4">
+                                    <img src={Check} />
+                                    <h6 
+                                        className="pt-2 pl-1 cursor-pointer"
+                                        style={{color: 'rgba(10, 33, 62, 0.6)'}}
+                                    >
                                         Check All
-                                    </span>
-                                    <div className="blue-btn blue-btn--filled d-inline-block ml-4">
-                                        <img
-                                            src={Edit}
-                                            className="mr-2"
-                                            alt=""
-                                        />
-                                        <span className="align-middle">
-                                            Edit
-                                        </span>
+                                    </h6>
+                                </div>
+                                <div
+                                    className={`roleActive d-flex mr-4`}
+                                >
+                                    <div className="d-flex py-2" style={{ cursor: 'pointer' }}>
+                                        <FontAwesomeIcon className="ml-3 mr-2 my-auto" icon={faPen} />
+                                        <h6 className="my-auto">Edit</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
+
+                        <div className="row pt-4">
                             <div className="col-4 border-right">
                                 {sectors.map(sector => (
                                     <div
-                                        className="d-flex justify-content-between mb-3 cursor-pointer"
+                                        className="d-flex justify-content-between mb-3 cursor-pointer overflow-auto"
                                         onClick={() =>
                                             handleClick(sector.sector)
                                         }
                                         key={sector.sector}
                                     >
-                                        <span
-                                            className={`font-weight-bolder text-muted ${
-                                                sector.selected
+                                        <h6
+                                            className={`font-weight-bolder ${sector.selected
                                                     ? 'text-blue'
-                                                    : ''
-                                            }`}
+                                                    : 'text-muted'
+                                                }`}
                                         >
                                             {sector.sector}
-                                        </span>
+                                        </h6>
                                         <img src={Right} alt="" />
                                     </div>
                                 ))}
                             </div>
                             <div className="col-8">
                                 {perm.map(p => (
-                                    <div className="d-flex mb-3" key={p}>
-                                        <div className="custom-control custom-switch d-inline-block mr-3">
+                                    <div className="d-flex mb-3 text-break" key={p}>
+                                        <div className="custom-control custom-switch d-inline-block mr-3 text-break">
                                             <input
                                                 type="checkbox"
                                                 defaultChecked={false}

@@ -2,4 +2,22 @@
 	.text-blue:before {
     	content:"• ";
 	}
+
+	.roleInactive {
+		width: 100px;
+		color: #FD5E1A;
+		background: rgba(253, 94, 26, 0.1);
+		border-radius: 100px; 
+		border: 1.5px solid #FD5E1A;
+	}
+	.roleActive {
+		width: 100px;
+		color: white;
+		background: #518EF8;
+		border-radius: 100px; 
+		border: 1.5px solid white;
+	}
+	.activeBg {
+		background: #518EF8;
+	}
 }

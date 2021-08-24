@@ -23,8 +23,8 @@ const SP_ProductDetails = () => {
     }
   }
 
-  function goto_rdr() {
-    history.push('/recurring-deposit-products');
+  function goto_sp() {
+    history.push('/share-products');
   }
 
   function name_changeHandler(e) {
@@ -38,7 +38,7 @@ const SP_ProductDetails = () => {
       >
 
         <h5 
-          className="py-3"
+          className=""
         >
           Create Share Product
         </h5>
@@ -125,7 +125,7 @@ const SP_ProductDetails = () => {
                   className="SP-PD-btn-section my-5 w-100"
                 >
                   <Button 
-                    onClick={goto_rdr}
+                    onClick={goto_sp}
                     className="py-2 btn-prev font-weight-medium" 
                   >
                     <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />

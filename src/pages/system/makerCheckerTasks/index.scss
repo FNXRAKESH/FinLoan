@@ -1,0 +1,13 @@
+#makerCheckerTasks {
+	.text-blue:before {
+    	content:"• ";
+	}
+
+	.roleActive {
+		width: 100px;
+		color: white;
+		background: #518EF8;
+		border-radius: 100px; 
+		border: 1.5px solid white;
+	}
+}
