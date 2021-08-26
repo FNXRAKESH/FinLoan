@@ -96,7 +96,7 @@ export default function System() {
         </div>
         <div
           className="col-sm-6 col-lg-4 my-3"
-          onClick={() => history.push('/managejobs')}
+          onClick={() => history.push('/manageschedulerjobs')}
         >
           <div className="white-card d-flex align-items-center justify-content-start cursor-pointer">
             <div className="icon-img code mr-4">
@@ -108,7 +108,10 @@ export default function System() {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 col-lg-4 my-3">
+        <div 
+          className="col-sm-6 col-lg-4 my-3"
+          onClick={() => history.push('/makercheckertasks')}
+        >
           <div className="white-card d-flex align-items-center justify-content-start cursor-pointer">
             <div className="icon-img settings mr-4">
               <img src={Settings} alt="" />
@@ -119,7 +122,10 @@ export default function System() {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 col-lg-4 my-3">
+        <div 
+          className="col-sm-6 col-lg-4 my-3"
+          onClick={() => history.push('/configurations')}
+        >
           <div className="white-card d-flex align-items-center justify-content-start cursor-pointer">
             <div className="icon-img config mr-4">
               <img src={Config} alt="" />
@@ -155,7 +161,10 @@ export default function System() {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 col-lg-4 my-3">
+        <div 
+          className="col-sm-6 col-lg-4 my-3"
+          onClick={() => history.push('/etemappingall')}
+        >
           <div className="white-card d-flex align-items-center justify-content-start cursor-pointer">
             <div className="icon-img entity mr-4">
               <img src={Entity} alt="" />
@@ -166,7 +175,10 @@ export default function System() {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 col-lg-4 my-3">
+        <div 
+          className="col-sm-6 col-lg-4 my-3"
+          onClick={()=> {history.push('/externalservices')}}
+        >
           <div className="white-card d-flex align-items-center justify-content-start cursor-pointer">
             <div className="icon-img service mr-4">
               <img src={Service} alt="" />
@@ -177,7 +189,10 @@ export default function System() {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 col-lg-4 my-3">
+        <div 
+          className="col-sm-6 col-lg-4 my-3"
+          onClick={()=> {history.push('/manageSurveys')}}
+        >
           <div className="white-card d-flex align-items-center justify-content-start cursor-pointer">
             <div className="icon-img survey mr-4">
               <img src={Surveys} alt="" />

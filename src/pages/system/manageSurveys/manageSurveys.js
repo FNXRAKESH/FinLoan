@@ -109,6 +109,7 @@ const manageSurveys = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
+              onClick={()=>{history.push('/createSurvey')}}
             >
               <FontAwesomeIcon className="ml-4 mr-2 my-auto" icon={faPlusCircle} style={{fontSize: '20px'}}/>
               <h6 className="my-auto">Create Survey</h6>
@@ -252,7 +253,7 @@ const manageSurveys = () => {
                       className="py-3 d-flex" 
                     >
                       <div>
-                        <FontAwesomeIcon className="mx-2 align-middle cursor-pointer" icon={faPen} style={{color: '#518EF8'}}/>
+                        <FontAwesomeIcon className="mx-2 align-middle cursor-pointer" icon={faPen} style={{color: '#518EF8'}} onClick={() => {history.push('/editSurvey')}}/>
                       </div>
                       <Delete_Survey />
                     </td>

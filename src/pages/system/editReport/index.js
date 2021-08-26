@@ -50,6 +50,8 @@ export default function EditReport() {
     const [query, setQuery] = useState('');
     const [search, updateSearch] = useState([]);
 
+    const reportName = localStorage.getItem('reportName');
+
     const reportDataChange = (e, key) => {
         console.log(e.target.value);
         setDetails(details => ({ ...details, [key]: e.target.value }));
@@ -115,7 +117,7 @@ export default function EditReport() {
                     <div className="white-card height-unset">
                         <div className="border-bottom pb-4 mb-4 text-center">
                             <h6 className="font-weight-bolder">
-                                Active Clients
+                                {reportName}
                             </h6>
                             <span className="text-muted">Report Type: SMS</span>
                         </div>

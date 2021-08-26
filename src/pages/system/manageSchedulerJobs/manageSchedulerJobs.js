@@ -112,10 +112,21 @@ const manageSchedulerJobs = () => {
   {id: 8, Name: 'Execute Report Mailing Jobs',  Date: 'March 25, 2021', Time: '06:31:00 PM', PreviousRun: 'Success', CurrentStatus: 'Not Running', ErrorLogs: 'No'}
   ];
 
-  const [users, setUsers] = React.useState([]);
+  const [jobs, setJobs] = React.useState([]);
+  const [active, setActive] = React.useState(true);
+
+  const handleClick = () => {
+    setActive(!active);
+  }
+
+  const setJobName = (url, job) => {
+    history.push(url);
+    localStorage.removeItem('jobName');
+    localStorage.setItem('jobName',job);
+  }
 
   React.useEffect(() =>{
-    setUsers(items)
+    setJobs(items)
   }, [])
 
   return (
@@ -123,24 +134,25 @@ const manageSchedulerJobs = () => {
         id="manageSchedulerJobs"
         className="pl-5"
       >
-        <div>
-          <h5 className="py-4 d-flex">
+        <div className="d-flex py-4">
+          <h5 className="pt-1">
             Manage Scheduler Jobs
-            <p 
-              className="ml-3 pl-3 py-1"
-              style={{
-                fontSize: '16px',
-                width: '80px',
-                color: '#0A9D7A',
-                background: 'rgba(10, 157, 122, 0.1)',
-                borderRadius: '100px'
-              }}
-            >
-              Active
-            </p>
           </h5>
-        </div>
+          <p 
+            className={`${active ? 'activeStatus' : 'inactiveStatus'} ml-3 px-3 py-1`}
+            style={{
+             
+            }}
+          >
+            {active ? "Active" : "Inactive"}
+          </p>
+          <div class="custom-control custom-switch ml-auto">
+            <input type="checkbox" class="custom-control-input" id="custom-switch-1" onClick={handleClick} checked={active}/>
+            <label class="custom-control-label" for="custom-switch-1">
+            </label>
+          </div>
 
+        </div>
         
         <div className="container">
 
@@ -204,7 +216,7 @@ const manageSchedulerJobs = () => {
                 
                 <tbody id="table-body" className="mt-3 pt-4">
                   
-                  {users.map((user) => (
+                  {jobs.map((user) => (
                   <tr>
                     <td 
                       className="py-3 w-25" 
@@ -216,7 +228,10 @@ const manageSchedulerJobs = () => {
                           type="checkbox"
                         />
                         </div> 
-                        <div className="ml-3">
+                        <div 
+                          className="ml-3 cursor-pointer"
+                          onClick={()=> setJobName('/jobDetails', user.Name)}
+                        >
                           {user.Name}
                         </div>
                       </div>

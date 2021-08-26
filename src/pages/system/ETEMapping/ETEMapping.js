@@ -2,6 +2,7 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './ETEMapping.scss';
 import { useHistory } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faChevronDown, faArrowRight, faPlusCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
@@ -10,8 +11,7 @@ import ReactDOM from 'react-dom';
 import {Button, Modal} from 'react-bootstrap';
 
 
-const Add_Entity_Mapping = () => {
-  
+const Add_Entity_Mapping = ({name}) => {  
   const [show, setShow] = React.useState(false);
 
   const handleClose = () => setShow(false);
@@ -56,12 +56,12 @@ const Add_Entity_Mapping = () => {
               </div>
               <div className="mt-4">
                 <label>
-                  Loan Products
+                  {name}
                 </label>
                 <select
                     className="custom-select px-3"
                 >
-                  <option selected>Select Loan Product</option>
+                  <option selected>Select {name}</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
@@ -107,6 +107,8 @@ const ETEMapping = () => {
 
   let history = useHistory();
 
+  const [name, setName] = React.useState(localStorage.getItem('pageName'));
+
   const items = [{Office: 'Finexus Head Office', LoanProduct: '', Date: 'March 25, 2021', Time: '06:31:00 PM'},
   {Office: 'Finexus Head Office', LoanProduct: '', Date: 'March 25, 2021', Time: '06:31:00 PM'},
   {Office: 'Finexus Bangalore Office', LoanProduct: '', Date: 'March 25, 2021', Time: '06:31:00 PM'},
@@ -116,13 +118,12 @@ const ETEMapping = () => {
   {Office: 'Finexus Head Office', LoanProduct: '', Date: 'March 25, 2021', Time: '06:31:00 PM'}
   ];
 
-  const filters = [];
-
   const [users, setUsers] = React.useState([]);
 
   React.useEffect(() =>{
-    setUsers(items)
-  }, [])
+    setUsers(items);
+    console.log(location.name);
+  }, [location])
 
   return (
       <div 
@@ -134,14 +135,14 @@ const ETEMapping = () => {
           
           <div>
             <h5 className="py-2">
-              Office Access to Loan Products
+              Office Access to {name}
             </h5>
           </div>
 
           <div 
             className="ml-auto d-flex"
           >
-            <Add_Entity_Mapping />
+            <Add_Entity_Mapping name={name} />
           </div>
           
         </div>
@@ -175,7 +176,7 @@ const ETEMapping = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <h6 className="my-auto">Loan Products</h6>
+                  <h6 className="my-auto">{name}</h6>
                   <FontAwesomeIcon className="ml-2 mr-2 my-auto" icon={faChevronDown} style={{fontSize: '16px'}}/>
                 </motion.div>
               </div>
@@ -224,7 +225,7 @@ const ETEMapping = () => {
                     <th 
                       className="py-3 pr-4 font-weight-normal text-left" 
                     >
-                      Loan Products
+                      {name}
                       <FontAwesomeIcon className="ml-3" icon={faChevronDown} />
                     </th>
                     <th 

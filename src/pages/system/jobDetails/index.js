@@ -26,6 +26,7 @@ const data = [
 
 export default function JobDetails() {
     const history = useHistory();
+    const jobName = localStorage.getItem('jobName');
 
     const [details, setDetails] = useState(data);
 
@@ -54,7 +55,7 @@ export default function JobDetails() {
                     <div className="white-card height-unset">
                         <div className="border-bottom pb-4 mb-4">
                             <h6 className="font-weight-bolder">
-                                Add Accrual Transactions
+                                {jobName}
                             </h6>
                             <span className="text-muted"> 0 1 0 1/1 * ? *</span>
                         </div>

@@ -85,6 +85,9 @@ export default function RoleDetails() {
     const [sectors, setSectors] = useState(data);
     const [perm, setPerm] = useState(permissions);
 
+    const roleName = localStorage.getItem('roleName');
+    const roleDesc = localStorage.getItem('roleDesc');
+
     const handleActive = () => {
         setActive(!active);
     };
@@ -119,9 +122,9 @@ export default function RoleDetails() {
                                 color: `${active ? 'white' : ''}`
                             }}
                         >
-                            Loan Officer
+                            {roleName}
                         </h5>
-                        <h6 style={{ color: `${active ? 'white' : 'rgba(10, 33, 62, 0.6)'}` }}>Loan Officer</h6>
+                        <h6 style={{ color: `${active ? 'white' : 'rgba(10, 33, 62, 0.6)'}` }}>{roleDesc}</h6>
                     </div>
 
                 </div>

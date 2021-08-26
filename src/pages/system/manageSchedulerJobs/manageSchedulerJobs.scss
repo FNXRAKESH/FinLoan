@@ -12,6 +12,22 @@
     width: 16px;
   }
 
+  .activeStatus {
+    font-size: 16px;
+    width: 80px;
+    color: #0A9D7A;
+    background: rgba(10, 157, 122, 0.1);
+    border-radius: 100px;
+  }
+
+  .inactiveStatus {
+    font-size: 16px;
+    width: 85px;
+    color: #FD5E1A;
+    background: rgba(253, 94, 26, 0.1);
+    border-radius: 100px;
+  }
+
   // ::-webkit-scrollbar {
   //   width: 5px;
   // }

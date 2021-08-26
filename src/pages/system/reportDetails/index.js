@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {Button, Modal} from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import Edit from './icons/edit.svg';
@@ -79,14 +80,19 @@ const Delete_Report = () => {
   
 
 export default function ReportDetails() {
+    const history = useHistory();
     const [details, setDetails] = useState(data);
+    const reportName = localStorage.getItem('reportName');
 
     return (
         <div id="reportdetails" className="pl-5 mb-5">
             <div className="py-3 d-flex align-items-center">
                 <h5 className="flex-grow-1">Report Details</h5>
                 <div className="d-flex">
-                    <div className="blue-btn d-inline-block">
+                    <div 
+                        className="blue-btn d-inline-block"
+                        onClick={()=> history.push('/editreport')}
+                    >
                         <img src={EditBlue} className="mr-2" alt="" />
                         <span className="align-middle">Edit</span>
                     </div>
@@ -99,7 +105,7 @@ export default function ReportDetails() {
                     <div className="white-card height-unset">
                         <div className="border-bottom pb-4 mb-4">
                             <h6 className="font-weight-bolder">
-                                Active Clients
+                                {reportName}
                             </h6>
                             <span className="text-muted">Report Type: SMS</span>
                         </div>

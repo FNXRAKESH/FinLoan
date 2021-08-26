@@ -103,6 +103,7 @@ const notificationServicesTable = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
+                  onClick={()=>{history.push('/notificationservices')}}
                 >
                   <FontAwesomeIcon className="ml-4 mr-2 my-auto" icon={faEdit} style={{fontSize: '20px'}}/>
                   <h6 className="my-auto">Edit</h6>

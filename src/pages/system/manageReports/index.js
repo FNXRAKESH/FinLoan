@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Plus from './icons/plus-circle.svg';
 import Search from './icons/search.svg';
 import ArrowDown from './icons/chevron-down.svg';
@@ -66,9 +67,16 @@ const data = [
 ];
 
 export default function ManageReports() {
+    const history = useHistory();
     const [values, setValues] = useState(data);
 
     const handleSearch = e => {};
+
+    const setReport = (url, report) => {
+        history.push(url);
+        localStorage.removeItem('reportName');
+        localStorage.setItem('reportName', report);
+    }
 
     return (
         <div id="managereports" className="pl-5 mb-5">
@@ -76,7 +84,7 @@ export default function ManageReports() {
                 <h5 className="flex-grow-1">Manage Reports</h5>
                 <div
                     className="blue-btn"
-                    // onClick={() => triggerModal('addcode')}
+                    onClick={() => history.push('/createreport')}
                 >
                     <img src={Plus} className="mr-2" alt="" />
                     Create Report
@@ -167,7 +175,10 @@ export default function ManageReports() {
                             <tbody>
                                 {values.map(record => (
                                     <tr key={record.name}>
-                                        <td className="name-col">
+                                        <td 
+                                            className="name-col cursor-pointer"
+                                            onClick={() => setReport('/reportdetails',record.name)}
+                                        >
                                             {record.name}
                                         </td>
                                         <td className="desc-col">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import swal from 'sweetalert';
 import Plus from './icons/plus-circle.svg';
 import ReactDOM from 'react-dom';
@@ -6,30 +7,36 @@ import {Button, Modal} from 'react-bootstrap';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const data = [
-    {
-        role: 'Loan Officer',
-        desc: 'Loan Officer',
-        checked: false
-    },
-    {
-        role: 'Self Service User',
-        desc: 'Self service user role',
-        checked: true
-    },
-    {
-        role: 'Super User',
-        desc: 'This role provides all Application permissions.',
-        checked: true
-    }
-];
-
-const Add_Role = () => {
+const Add_Role = ({data, setData}) => {
   
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [newRole, setNewRole] = useState({
+        role: '',
+        desc: '',
+        checked: true
+    });
+
+    const addNewRole = () => {
+
+        var f = 0;
+
+        data.forEach(el => {
+
+            if (newRole.role == el.role) {
+                f = 1;
+                swal({
+                    icon: 'error',
+                    title: 'This role already exists'
+                });
+            }
+        });
+
+        setData([...data, newRole]);
+    }
   
     return (
       <div>
@@ -62,6 +69,7 @@ const Add_Role = () => {
                     <input 
                         className="form-control"
                         type="text"
+                        onChange={(e)=> {setNewRole({role: e.target.value, desc: newRole.desc, checked: newRole.checked})}}
                     />
                 </div>
                 <div className="mt-3">
@@ -72,6 +80,7 @@ const Add_Role = () => {
                         className="form-control"
                         rows="3"
                         type="text"
+                        onChange={(e)=> {setNewRole({role: newRole.role, desc: e.target.value, checked: newRole.checked})}}
                     />
                 </div>
                 <div className="mt-3">
@@ -79,7 +88,7 @@ const Add_Role = () => {
                     onClick={handleClose}
                     className="border-0 btn-lg btn-block mb-3"
                     style={{background: '#1AC29A', color: 'white'}}>
-                    <h6 className="my-1">Add Role</h6>
+                    <h6 className="my-1" onClick={addNewRole}>Add Role</h6>
                     </Button>
                 </div>
                 </Modal.Body>
@@ -94,59 +103,53 @@ const Add_Role = () => {
   
 
 export default function ManageRoles() {
-    const [roles, addRoles] = useState(data);
-    const [newRole, setNewRole] = useState({
-        name: '',
-        desc: ''
-    });
+    const history = useHistory();
+    //const [roles, addRoles] = useState(data);
 
-    const addNewRole = () => {
-        let unique = 1;
-        const regexp = new RegExp(`^${newRole.name}$`, 'i');
-
-        roles.forEach(role => {
-            if (role.role.match(regexp)) {
-                unique = 0;
-                swal({
-                    icon: 'error',
-                    title: 'This role already exists'
-                });
-                return;
-            }
-        });
-
-        if (unique) {
-            addRoles(roles => [
-                ...roles,
-                { role: newRole.name, desc: newRole.desc, checked: false }
-            ]);
-            setNewRole({
-                name: '',
-                desc: ''
-            });
+    const [data, setData] = useState([
+        {
+            role: 'Loan Officer',
+            desc: 'Loan Officer',
+            checked: false
+        },
+        {
+            role: 'Self Service User',
+            desc: 'Self service user role',
+            checked: true
+        },
+        {
+            role: 'Super User',
+            desc: 'This role provides all Application permissions.',
+            checked: true
         }
-    };
-
-    const handleAddRole = (e, key) => {
-        setNewRole(newRole => ({
-            ...newRole,
-            [key]: e.target.value.trim()
-        }));
-    };
+    ]);
+    
+    const setRole = (url, role, roleDesc) => {
+        history.push(url);
+        localStorage.removeItem('roleName');
+        localStorage.removeItem('roleDesc');
+        localStorage.setItem('roleName', role);
+        localStorage.setItem('roleDesc', roleDesc);
+    }
 
     return (
         <div id="manageroles" className="pl-5 mb-5">
             <div className="py-3 d-flex align-items-center">
                 <h5 className="flex-grow-1">Manage Roles & Permissions</h5>
                 <div>
-                    <Add_Role />
+                    <Add_Role data={data} setData={setData}/>
                 </div>
             </div>
             <div className="row w-100">
-                {roles.map(role => (
+                {data.map(role => (
                     <div className="col-sm-6 col-lg-4 my-3" key={role.role}>
-                        <div className="white-card d-flex align-items-center justify-content-between">
-                            <div className="overflow-hidden">
+                        <div 
+                            className="white-card d-flex align-items-center justify-content-between" 
+                        >
+                            <div 
+                                className="overflow-hidden cursor-pointer"
+                                onClick={()=>{setRole('/roledetails', role.role, role.desc)}}
+                            >
                                 <h6>{role.role}</h6>
                                 <div className="text-muted text-truncate">
                                     {role.desc}
