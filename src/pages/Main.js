@@ -136,6 +136,9 @@ import notificationServices from './system/notificationServices/notificationServ
 import notificationServicesTable from './system/notificationServicesTable/notificationServicesTable';
 import externalServices from './system/externalServices/externalServices';
 import makerCheckerTasks from './system/makerCheckerTasks';
+import workingDays from './workingDays/workingDays';
+import passwordPreference from './system/passwordPreference/passwordPreference';
+import bulkImport from './system/bulkImport/bulkImport';
 
 const Main = () => {
   useEffect(() => {
@@ -207,6 +210,9 @@ const Main = () => {
             <Route path="/managejobs" component={ManageJobs} />
             <Route path="/manageroles" component={ManageRoles} />
             {/* Ashish */}
+            <Route path="/bulkimport" component={bulkImport} />
+            <Route path="/passwordpreference" component={passwordPreference} />
+            <Route path="/workingdays" component={workingDays} />
             <Route path="/makercheckertasks" component={makerCheckerTasks} />
             <Route path="/externalservices" component={externalServices} />
             <Route path="/notificationServices_table" component={notificationServicesTable} />

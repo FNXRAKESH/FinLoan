@@ -58,6 +58,9 @@ const App = () => (
       <Route path="/manageroles" component={Main} />
       
       {/* Ashish */}
+      <Route path="/bulkImport" component={Main} />
+      <Route path="/passwordpreference" component={Main} />
+      <Route path="/workingdays" component={Main} />
       <Route path="/makercheckertasks" component={Main} />
       <Route path="/externalservices" component={Main} />
       <Route path="/notificationServices_table" component={Main} />
@@ -129,12 +132,12 @@ const App = () => (
       <Route path="/products" component={Main} />
       <Route path="/manage-tax-configurations" component={Main} />
       {/* Rohit */}
-      <Route path="/importOffice" component={Main} />
-      <Route path="/importEmployees" component={Main} />
+      <Route path="/importOffices" component={Main} />
+      <Route path="/importEmployee" component={Main} />
       <Route path="/importUsers" component={Main} />
-      <Route path="/importClient" component={Main} />
+      <Route path="/importClients" component={Main} />
       <Route path="/importGroups" component={Main} />
-      <Route path="/importCenter" component={Main} />
+      <Route path="/importCenters" component={Main} />
       <Route path="/importLoanAccounts" component={Main} />
       <Route path="/importLoanRepayments" component={Main} />
       <Route path="/importSavingsAccounts" component={Main} />

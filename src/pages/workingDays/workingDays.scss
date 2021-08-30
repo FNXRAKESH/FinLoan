@@ -1,0 +1,18 @@
+.workingDaysCheckbox {
+  zoom: 1.5;
+}
+
+.workingDays-btn {
+  color: white !important;
+  background: #1AC29A !important;
+  border-color: #1AC29A !important;
+  font-weight: 600 !important;
+  &:hover {
+    background: #1AC29A !important;
+    border-color: #1AC29A !important;
+  }
+}
+
+.workingDaysBorder {
+  border-radius: 15px;
+}

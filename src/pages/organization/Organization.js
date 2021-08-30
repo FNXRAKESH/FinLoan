@@ -84,7 +84,10 @@ const Organization = (props) => {
             <p>Bulk entry screen for mapping fund sources to loans</p>
           </div>
         </div>
-        <div className="organization d-flex align-items-center">
+        <div 
+          className="organization d-flex align-items-center"
+          onClick={() => props.history.push('/passwordpreference')}
+        >
           <div className="icons">
             <img src={password} alt="Password Preferences" />
           </div>
@@ -154,7 +157,10 @@ const Organization = (props) => {
             <p>Manage Tellers / Cashier and Cash Allocation and Settlement</p>
           </div>
         </div>
-        <div className="organization d-flex align-items-center">
+        <div 
+          className="organization d-flex align-items-center"
+          onClick={() => props.history.push('/workingdays')}
+        >
           <div className="icons">
             <img src={workingDays} alt="Working Days" />
           </div>

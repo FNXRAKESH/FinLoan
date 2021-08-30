@@ -1,0 +1,20 @@
+.bulkImport {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  .icons {
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .content {
+    padding-left: 10px;
+    overflow: hidden;
+    p {
+      font-size: 14px !important;
+      margin: 0;
+    }
+  }
+}

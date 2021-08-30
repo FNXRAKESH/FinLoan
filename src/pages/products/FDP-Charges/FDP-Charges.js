@@ -123,7 +123,7 @@ return (
                   <h5>Charges</h5>
                 </div>
 
-                <div className="FDP-Charges-input-section my-4 py-4 ">
+                <div className="FDP-Charges-input-section my-4 py-4">
                   <div className="col-md-6">
                     <div className="form-group">
                       <select 

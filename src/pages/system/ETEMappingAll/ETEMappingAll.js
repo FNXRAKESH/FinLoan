@@ -44,7 +44,7 @@ const ETEMappingAll = () => {
                 <h6>Loan Products</h6>
                 <FontAwesomeIcon icon={faChevronRight} className="ete_icon ml-auto mr-3" />
               </div>
-              <p style={{ fontSize: '14px' }}>Office access to Loan products</p>
+              <p className="ete_line" style={{ fontSize: '14px' }}>Office access to Loan products</p>
             </div>
           </div>
 
@@ -59,7 +59,7 @@ const ETEMappingAll = () => {
                 <h6>Saving Products</h6>
                 <FontAwesomeIcon icon={faChevronRight} className="ete_icon ml-auto mr-3" />
               </div>
-              <p style={{ fontSize: '14px' }}>Office access to savings products</p>
+              <p className="ete_line" style={{ fontSize: '14px' }}>Office access to savings products</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ const ETEMappingAll = () => {
                 <h6>Charges / Fees</h6>
                 <FontAwesomeIcon icon={faChevronRight} className="ete_icon ml-auto mr-3" />
               </div>
-              <p style={{ fontSize: '14px' }}>Office access to charges</p>
+              <p className="ete_line" style={{ fontSize: '14px' }}>Office access to charges</p>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ const ETEMappingAll = () => {
                 <h6>Loan Products</h6>
                 <FontAwesomeIcon icon={faChevronRight} className="ete_icon ml-auto mr-3" />
               </div>
-              <p style={{ fontSize: '14px' }}>Office access to Loan products</p>
+              <p className="ete_line" style={{ fontSize: '14px' }}>Office access to Loan products</p>
             </div>
           </div>
 
@@ -106,7 +106,7 @@ const ETEMappingAll = () => {
                 <h6>Saving Products</h6>
                 <FontAwesomeIcon icon={faChevronRight} className="ete_icon ml-auto mr-3" />
               </div>
-              <p style={{ fontSize: '14px' }}>Office access to savings products</p>
+              <p className="ete_line" style={{ fontSize: '14px' }}>Office access to savings products</p>
             </div>
           </div>
         </div>
