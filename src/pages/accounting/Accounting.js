@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Accounting.styles.scss';
 import { motion } from 'framer-motion';
 import accurals from '../../images/accounting/accurals.svg';
@@ -11,7 +12,9 @@ import posting from '../../images/accounting/posting.svg';
 import provisioning from '../../images/accounting/provisioning.svg';
 import rules from '../../images/accounting/rules.svg';
 import search from '../../images/accounting/search.svg';
+
 const Accounting = () => {
+  const history = useHistory();
   const [accounting, setAccounting] = useState('');
   return (
     
@@ -24,9 +27,10 @@ const Accounting = () => {
           className="d-flex flex-wrap justify-content-between"
         >
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Frequent Posting');
+              history.push('/frequentposting');
             }}
             style={
               accounting === 'Frequent Posting'
@@ -57,9 +61,10 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Chart of Accounts');
+              //history.push();
             }}
             style={
               accounting === 'Chart of Accounts'
@@ -90,9 +95,10 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Add Journal Entries');
+              history.push('addjournalentry');
             }}
             style={
               accounting === 'Add Journal Entries'
@@ -123,7 +129,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Closing Entries');
             }}
@@ -156,7 +162,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Search Journal Entries');
             }}
@@ -189,7 +195,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Accounting Rules');
             }}
@@ -222,7 +228,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Accounts linked to financial activities');
             }}
@@ -255,7 +261,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Accurals');
             }}
@@ -288,7 +294,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Migrate Opening Balance');
             }}
@@ -321,7 +327,7 @@ const Accounting = () => {
             </div>
           </div>
           <div
-            className="accounting d-flex align-items-center"
+            className="accounting d-flex align-items-center cursor-pointer"
             onClick={() => {
               setAccounting('Provisioning Entries');
             }}
