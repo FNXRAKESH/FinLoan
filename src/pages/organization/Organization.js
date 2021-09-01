@@ -199,7 +199,10 @@ const Organization = (props) => {
             <p>Define AdHocQuery for Organization</p>
           </div>
         </div>
-        <div className="organization d-flex align-items-center">
+        <div 
+          className="organization d-flex align-items-center"
+          onClick={() => props.history.push('/bulkimport')}
+        >
           <div className="icons">
             <img src={bulkImport} alt="Bulk Import" />
           </div>

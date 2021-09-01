@@ -55,8 +55,10 @@ const Charges_list = () => {
 
   return (
     <div id="FloatingRates" className="pl-5">
-      <div className="py-3 d-flex">
-        <h5 className="flex-grow-1">List of Charges</h5>
+      <div className="py-3 row d-flex">
+      <h5 className="col-md-6 mt-3 mb-4">List of Charges</h5>
+
+      <div className="col-md-6 mt-3 d-flex justify-content-end">
         <motion.button
           className="create-cl py-2 px-3"
           initial={{ opacity: 0, y: 30 }}
@@ -71,6 +73,7 @@ const Charges_list = () => {
           />
           Create Charge
         </motion.button>
+      </div>
       </div>
       
       <div className="container">
